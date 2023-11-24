@@ -6,3 +6,5 @@ $computerName = $env:COMPUTERNAME
 $credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $adminUsername, (ConvertTo-SecureString -String $adminPassword -AsPlainText -Force)
 
 Add-Computer -DomainName $domainName -Credential $credential -ComputerName $computerName -Restart
+
+By. Darlan Nery
