@@ -1,0 +1,8 @@
+$domainName = "empresa.local"
+$adminUsername = "useradmin"
+$adminPassword = "senha123"
+$computerName = $env:COMPUTERNAME
+
+$credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $adminUsername, (ConvertTo-SecureString -String $adminPassword -AsPlainText -Force)
+
+Add-Computer -DomainName $domainName -Credential $credential -ComputerName $computerName -Restart
